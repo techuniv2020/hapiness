@@ -6,7 +6,3 @@ const server = Hapi.server({
 });
 
 module.exports = server;
-
-
-
-
