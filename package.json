@@ -4,16 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/nodemon src/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/eslint --fix ./src"
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^18.4.0"
+    "@hapi/hapi": "^18.4.0",
+    "laabr": "^5.1.5"
   },
   "devDependencies": {
     "eslint": "^6.7.1",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
     "sinon": "^7.5.0"
   }
 }
