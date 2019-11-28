@@ -3,6 +3,10 @@ module.exports = [{
   path: '/health',
   handler: function (request, h) {
     request.log('info', 'Server is healthy!');
-    return h.response('OK!').code(200);
+    return h
+      .response({
+        status:'OK!'
+      })
+      .code(200);
   }
 }];

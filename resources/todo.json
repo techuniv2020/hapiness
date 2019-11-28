@@ -1,19 +1,17 @@
-{
-  "data": [
-    {
-      "id":"1",
-      "name": "write code",
-      "status": "ACTIVE"
-    },
-    {
-      "id":"2",
-      "name": "write test",
-      "status": "COMPLETED"
-    },
-    {
-      "id":"3",
-      "name": "review code",
-      "status": "ACTIVE"
-    }
-  ]
-}
+ [
+  {
+    "id":"1",
+    "name": "write code",
+    "status": "ACTIVE"
+  },
+  {
+    "id":"2",
+    "name": "write test",
+    "status": "COMPLETED"
+  },
+  {
+    "id":"3",
+    "name": "review code",
+    "status": "ACTIVE"
+  }
+]
