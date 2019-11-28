@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon src/"
+    "start": "./node_modules/.bin/nodemon src/",
+    "test": "lab -v ./__tests__/**/*.js"
   },
   "husky": {
     "hooks": {
@@ -18,6 +19,8 @@
     "laabr": "^5.1.5"
   },
   "devDependencies": {
+    "@hapi/code": "^7.0.0",
+    "@hapi/lab": "^21.0.0",
     "eslint": "^6.7.1",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
