@@ -8,7 +8,7 @@ const setupServer = async () => {
     host: 'localhost'
   });
   await server.register(plugins);
-  await server.route(routes);
+  server.route(routes);
   return server;
 };
 
