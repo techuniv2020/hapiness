@@ -3,14 +3,14 @@ const laabr = require('laabr');
 const options = {
   formats: {
     onPostStart: '[:time] [:level] :message at :host[uri]',
-    log: false 
+    log: false,
   },
-  tokens: { start:  () => '[start]' },
+  tokens: {start: () => '[start]'},
   indent: 0,
-  colored: true
+  colored: true,
 };
 
 module.exports = {
   plugin: laabr,
-  options
+  options,
 };

@@ -5,7 +5,7 @@ const routes = require('../routes');
 const setupServer = async () => {
   const server = Hapi.server({
     port: 3000,
-    host: 'localhost'
+    host: 'localhost',
   });
   await server.register(plugins);
   server.route(routes);
@@ -13,5 +13,5 @@ const setupServer = async () => {
 };
 
 module.exports = {
-  setupServer
+  setupServer,
 };

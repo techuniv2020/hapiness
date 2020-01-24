@@ -5,5 +5,5 @@ const quoteRoutes = require('./quote');
 module.exports = [
   ...healthRoutes,
   ...todoRoutes,
-  ...quoteRoutes
+  ...quoteRoutes,
 ];

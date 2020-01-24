@@ -3,21 +3,21 @@ const todoHandler = require('../handlers/todo');
 module.exports = [{
   method: 'GET',
   path: '/todo',
-  handler:  todoHandler.getTodos
+  handler: todoHandler.getTodos,
 }, {
   method: 'GET',
   path: '/todo/{id}',
-  handler: todoHandler.getTodo
+  handler: todoHandler.getTodo,
 }, {
   method: 'POST',
   path: '/todo',
-  handler: todoHandler.createTodo
+  handler: todoHandler.createTodo,
 }, {
   method: 'PUT',
   path: '/todo/{id}',
-  handler: todoHandler.updateTodo
+  handler: todoHandler.updateTodo,
 }, {
   method: 'DELETE',
   path: '/todo/{id}',
-  handler: todoHandler.destroyTodo
+  handler: todoHandler.destroyTodo,
 }];
