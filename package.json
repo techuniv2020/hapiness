@@ -16,8 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^19.0.5",
+    "@hapi/joi": "^17.1.0",
     "axios": "^0.19.2",
     "laabr": "^5.1.5",
+    "promise-fs": "^2.1.1",
     "uuid": "^3.4.0"
   },
   "devDependencies": {

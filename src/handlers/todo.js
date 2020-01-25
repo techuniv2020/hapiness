@@ -1,28 +1,30 @@
-let todos = require('../../resources/todo.json');
 const todoService = require('../services/todo');
 
-const getTodos = (request, h) => {
+const getTodos = async (request, h) => {
+  const todos = await todoService.getAll();
   return h.response(todos).code(200);
 };
 
-const getTodo = (request, h) => {
-  const todo = todoService.getById(todos, request.params.id);
+const getTodo = async (request, h) => {
+  const todo = await todoService.getById(request.params.id);
   return h.response(todo).code(200);
 };
 
-const createTodo = (request, h) => {
-  const newTodo = request.payload.data;
-  todos = todoService.create(todos, newTodo);
+const createTodo = async (request, h) => {
+  const newTodo = request.payload;
+  await todoService.create(newTodo);
   return h.response(newTodo).code(201);
 };
 
-const updateTodo = (request, h) => {
-  todos = todoService.update(todos, request.params.id, request.payload.status);
+const updateTodo = async (request, h) => {
+  const {params: {id}, payload: {status}} = request;
+  const todos = await todoService.update(id, status);
   return h.response(todos).code(200);
 };
 
-const destroyTodo = (request, h) => {
-  todos = todoService.destroy(todos, request.params.id);
+const destroyTodo = async (request, h) => {
+  const {params: {id}} = request;
+  const todos = await todoService.destroy(id);
   return h.response(todos).code(200);
 };
 
